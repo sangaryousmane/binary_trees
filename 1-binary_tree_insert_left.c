@@ -1,4 +1,4 @@
-#include <binary_trees.h>
+#include "binary_trees.h"
 
 
 /**
@@ -9,27 +9,22 @@
  */
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
 {
-	binary_tree_t *leftNode;
-	binary_tree_t *oldLeftNode;
-	leftNode = malloc(sizeof(binary_tree_t));
+	binary_tree_t *newLeftNode;
+
+	if (parent == NULL)
+		return NULL;
+
+	newLeftNode = binary_tree_node(parent, value);
 
 
-	if (leftNode == NULL || parent == NULL)
+	if (newLeftNode == NULL)
 		return (NULL);
 
-	oldLeftNode = leftNode;
-	leftNode->parent = parent;
-
-	if (leftNode->parent->left != NULL)
+	if (parent->left != NULL)
 	{
-
-		leftNode->parent->left->value = value;
-		leftNode->parent->left = leftNode;
-		oldLeftNode = leftNode->parent->left;
-		leftNode->left = oldLeftNode;
-		return (leftNode);
+		newLeftNode->left = parent->left;
+		parent->left->parent = newLeftNode;
 	}
-	leftNode->parent->left->value = value;
-	left->parent->left = leftNode;
-	return (leftNode);
+	parent->left = newLeftNode;
+	return (newLeftNode);
 }
