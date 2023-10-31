@@ -1,7 +1,5 @@
 #include "binary_trees.h"
 
-size_t max(size_t a, size_t b);
-
 /**
  * binary_tree_depth - compute the tree's height
  * @tree: pointer to the root node
