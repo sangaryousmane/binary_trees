@@ -4,8 +4,8 @@
 
 /**
  * binary_tree_insert_right - insert at the right of binary tree
- * parent: the parent or root node
- * value: the node value to insert
+ * @parent: the parent or root node
+ * @value: the node value to insert
  * Return: the newly inserted node
  */
 binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value)
