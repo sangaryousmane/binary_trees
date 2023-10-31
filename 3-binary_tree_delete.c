@@ -3,7 +3,7 @@
 
 /**
  * binary_tree_delete - deletes a tree
- * tree: the tree to delete
+ * @tree: the tree to delete
  * Return: nothing
  */
 void binary_tree_delete(binary_tree_t *tree)
