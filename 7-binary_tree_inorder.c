@@ -5,7 +5,7 @@
 /**
  * binary_tree_inorder - performs inorder traversal of trees
  * @tree: points to the root node
- * @fun: the function
+ * @func: the function
  * Return: nothing
  */
 void binary_tree_inorder(const binary_tree_t *tree, void (*func)(int))
@@ -14,6 +14,6 @@ void binary_tree_inorder(const binary_tree_t *tree, void (*func)(int))
 		return;
 
 	binary_tree_inorder(tree->left, func);
-	func(tree.n);
+	func(tree->n);
 	binary_tree_inorder(tree->right, func);
 }
